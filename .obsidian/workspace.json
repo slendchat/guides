@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Генерация SSL(TLS) сертификата для сервера.md",
+                "file": "certificates/Table of contents certificates.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Генерация SSL(TLS) сертификата для сервера"
+              "title": "Table of contents certificates"
             }
           }
         ],
@@ -207,9 +207,9 @@
   },
   "active": "2fdfce7b714c0a2c",
   "lastOpenFiles": [
-    "Pasted image 20250401100426.png",
+    "certificates/Генерация SSL(TLS) сертификата для сервера.md",
+    "certificates/certs_tree.png",
     "certificates/Table of contents certificates.md",
-    "Генерация SSL(TLS) сертификата для сервера.md",
     "README.md",
     "lxd&docker",
     "nginx&apache",

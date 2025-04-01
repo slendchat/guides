@@ -62,5 +62,47 @@ or move to default directory for trusted Certs, but this is another topic.
 
 ## 5. Explanation of certificates
 
-> ![[Pasted image 20250401100426.png]]
+> ![[certs_tree.png]]
 
+### X.509
+- Это стандарт сертификатов.
+- Определяет структуру сертификата: **issuer, subject, CN, SAN, public key, signature** и т.д.
+
+### Base64 ASCII (текстовые)
+
+#### **PEM (Privacy-Enhanced Mail)**
+- Расширения: `.pem`, `.crt`, `.cer`, `.key`
+- **ASCII-кодировка Base64**
+- Содержимое между:
+```
+	-----BEGIN CERTIFICATE----- 
+	 (Certificate)
+	-----END CERTIFICATE-----
+```
+
+- Часто используется в **Linux**, **Apache**, **Nginx**.
+- Может содержать:
+    - Сертификат
+    - Приватный ключ
+    - Цепочку сертификатов
+
+####  **PKCS#7**
+- Расширения: `.p7b`, `.p7c`
+- **Base64**
+- Только **сертификаты**, **без приватного ключа**
+- Часто используется в **Windows**, **Java (Tomcat)**
+
+---
+
+###  Binary (бинарные)
+#### **DER (Distinguished Encoding Rules)**
+- Расширения: `.der`, `.cer`
+- **Бинарный формат**
+- Тот же X.509, но в бинаре.
+- Часто используется в **Java**, **Windows**
+#### **PKCS#12**
+- Расширения: `.pfx`, `.p12`
+- **Бинарный**
+- Содержит **сертификат + цепочку + приватный ключ**
+- **Пароль-защищённый**
+- Используется в **Windows**, **IIS**, **Mac**, **Browsers (импорт/экспорт)**
