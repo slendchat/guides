@@ -36,4 +36,11 @@ IP.1  = 192.168.0.1
 IP.2  = 192.168.0.2
 ```
 
+## 2. Generating Private Key and CSR file
 
+```
+openssl req -new -nodes -newkey rsa:2048 \
+-keyout yourdomain.key \
+-out yourdomain.csr \
+-config yourdomain.cnf
+```
