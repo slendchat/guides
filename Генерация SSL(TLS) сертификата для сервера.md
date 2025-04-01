@@ -7,7 +7,8 @@ SAN необходим, так как современные браузеры н
 Этапы выдачи сертифика веб-серверу:
 Генерация CSR файла (Certificate Signing Request), удобно перед этим создать конфигурационный файл для генерации CSR.
 ## 1. CSR and .cnf file
-
+CN = main name for certificate
+alt_names = other names for server (IP addr, subdomains, etc.)
 `yourdomain.cnf`:
 ```
 [ req ]
@@ -44,3 +45,12 @@ openssl req -new -nodes -newkey rsa:2048 \
 -out yourdomain.csr \
 -config yourdomain.cnf
 ```
+
+## 3. Signing cert on root CA
+
+Go to http://domain_serv/certsrv/
+`Request Certificate` -> `advanced certificate request` -> {
+	1. Paste CSR content to the `Base-64-encoded certificate request`
+	2. Certificate Template - web server
+	3. 
+}
