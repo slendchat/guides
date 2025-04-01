@@ -54,3 +54,5 @@ Go to http://domain_serv/certsrv/
 	2. Certificate Template - web server
 	3. 
 }
+
+> ![[Pasted image 20250401100426.png]]
