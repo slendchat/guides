@@ -52,7 +52,15 @@ Go to http://domain_serv/certsrv/
 `Request Certificate` -> `advanced certificate request` -> {
 	1. Paste CSR content to the `Base-64-encoded certificate request`
 	2. Certificate Template - web server
-	3. 
+	3. Base64 encoded
+	4. Download certificate chain
 }
 
+## 4. Put the certificate on server
+Copy the chain certificate to server and connect it to Apache or Nginx
+or move to default directory for trusted Certs, but this is another topic.
+
+## 5. Explanation of certificates
+
 > ![[Pasted image 20250401100426.png]]
+
