@@ -18,7 +18,6 @@ After=network.target
   
 [Service]  
 ExecStart=/path/to/your/executable  
-Restart=always  
 User=your_username  
 Group=your_groupname  
 Environment=VAR_NAME=var_value  
