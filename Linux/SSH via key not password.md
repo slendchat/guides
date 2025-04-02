@@ -1,12 +1,38 @@
 
 ### Windows ssh to Linux
-1. First generate key on Linux machine with
-   `ssh-keygen -t rsa`
-   (
-	   - `ssh-keygen`: the tool to create SSH keys.
-	   `-t rsa`: specifies the **type** of key to generate — in this case, RSA
-   )
-2. 
+First generate key on Linux machine with `ssh-keygen -t rsa`
+
+Explanation of command:
+- `ssh-keygen`: the tool to create SSH keys.
+- `-t rsa`: specifies the **type** of key to generate — in this case, RSA
+
+The example output:
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/art/.ssh/id_rsa):
+/home/art/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/art/.ssh/id_rsa
+Your public key has been saved in /home/art/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:fNEzCPMBGL/e2JzFiy29Qou86J4m1obWLWcaX2fix6M art@vm1usm
+The key's randomart image is:
++---[RSA 3072]----+
+|      .o+..      |
+|      .. + +     |
+|        . + +    |
+|       . . o o   |
+|        S . o    |
+|       . *.* .   |
+|     +.oooXo*    |
+|    = *=*oo=+.   |
+|   o **=o.E+..   |
++----[SHA256]-----+
+```
+
+
 
 
 ### Linux ssh to Linux
