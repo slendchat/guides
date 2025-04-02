@@ -1,7 +1,7 @@
 
 ### SSH from windows to LINUX
 
-First generate a key on windows host
+First generate a key on windows host, if none is present.
 Command
 ```
 ssh-keygen -t rsa
