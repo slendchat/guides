@@ -48,3 +48,15 @@ Explanation:
 `[Install]`
 - `WantedBy=multi-user.target` makes it start at boot 
 
+### 2. Reload and apply the service
+
+reload the systemd configuration, to make it recognize the new service.
+```
+sudo systemctl daemon-reload
+```
+
+then Enable and Start the Service
+```
+sudo systemctl enable my_service
+sudo systemctl start my_service
+```
