@@ -17,8 +17,7 @@ The key pair must reside in
 `C:\Users\youraccount\.ssh\`
 
 after that copy the contents of  `C:\Users\Artur.Mamaliga\.ssh\id_rsa.pub`
-to `~/.ssh/authorized_keys` on **Linux** 
-???or `C:\Users\Artur.Mamaliga\.ssh\authorized_keys` on **Windows**
+to `~/.ssh/authorized_keys` on **Linux** **
 
 after that you can do 
 Command
@@ -27,6 +26,12 @@ sudo systemctl reload ssh
 ```
 
 This guide works on windows using SSH via command line, if you are using putty, you should manually add private keys in program.
+
+Success:
+```
+PS C:\Users\Artur.Mamaliga> ssh art@192.168.109.143
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-54-generic x86_64)
+```
 ### SSH from linux to *
 
 First generate key on Linux machine with 
@@ -76,3 +81,8 @@ ssh-copy-id art@192.168.109.143
 To use the utility, you need to specify the remote host that you would like to connect to, and the user account that you have password-based SSH access to. This is the account where your public SSH key will be copied.
 
 then just ssh art@192.168.109.143, and it goes.
+
+
+Glossary:
+https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement
+https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
