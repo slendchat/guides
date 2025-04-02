@@ -1,5 +1,9 @@
 
-### Windows ssh to Linux
+### SSH from windows to LINUX
+
+
+### SSH from linux to *
+
 First generate key on Linux machine with 
 
 Command:
@@ -37,7 +41,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Copy your public key to an existing server
+Copy your public key to an existing server, make sure you know password of account you are copying key.
 
 Command 
 ```
@@ -46,5 +50,4 @@ ssh-copy-id art@192.168.109.143
 
 To use the utility, you need to specify the remote host that you would like to connect to, and the user account that you have password-based SSH access to. This is the account where your public SSH key will be copied.
 
-
-### Linux ssh to Linux
+then just ssh art@192.168.109.143, and it goes.
