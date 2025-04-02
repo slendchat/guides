@@ -22,12 +22,29 @@ Restart=always
 User=your_username  
 Group=your_groupname  
 Environment=VAR_NAME=var_value  
+Restart=on-failure
   
 [Install]  
-WantedBy=default.target
+WantedBy=multi-user.target
 ```
+
+Explanation:
 
 - `[Unit]`: Descriptive information and dependencies.  
 - `[Service]`: Execution details, such as the command to start the service.  
 - `[Install]`: Specifies where the service should be linked.
+
+ `[Unit]`
+- `Description`: Human-readable name.
+- `After`: Defines ordering. E.g., `network.target` ensures network is up.
+`[Service]`
+- `Type`:
+    - `simple` (default): just run the command.
+    - `forking`: for daemons that fork.
+    - `oneshot`: for scripts that do one task and exit.
+- `User`: run the service as this user.
+- `ExecStart`: what to run.
+- `Restart`: handle restarts (e.g., `always`, `on-failure`, `no`).
+`[Install]`
+- `WantedBy=multi-user.target` makes it start at boot 
 
