@@ -25,3 +25,12 @@ lo              65536 103173029      0      0 0      103173029      0      0    
 - The `-DRP` suffixed fields indicate the amount of packets dropped.
 - The `-OVR` suffixed fields indicate the amount of packets lost due to overrun.
 
+netstat
+- `-t` for active TCP socket connections
+- `-u` for active UDP socket connections
+- `-w` for active RAW socket connections
+- `-x` for active Unix socket connections
+- `-a` option will display sockets that are listening for connection.
+
+
+
