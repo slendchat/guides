@@ -59,3 +59,15 @@ then Enable and Start the Service
 sudo systemctl enable my_service
 sudo systemctl start my_service
 ```
+
+### 3. Additionally you can check service
+
+Check its status
+```
+sudo systemctl status my_service
+```
+
+Check it logs
+```
+journalctl -u myservice
+```
