@@ -26,3 +26,8 @@ Environment=VAR_NAME=var_value
 [Install]  
 WantedBy=default.target
 ```
+
+- `[Unit]`: Descriptive information and dependencies.  
+- `[Service]`: Execution details, such as the command to start the service.  
+- `[Install]`: Specifies where the service should be linked.
+
