@@ -37,7 +37,6 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-
-
+Then to apply this key
 
 ### Linux ssh to Linux
