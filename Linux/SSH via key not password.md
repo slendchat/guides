@@ -1,7 +1,30 @@
 
 ### SSH from windows to LINUX
 
+First generate a key on windows host
+Command
+```
+ssh-keygen -t rsa
+```
+or
+```
+ssh-keygen -b 4096
+```
 
+depending on type of key you want.
+
+The key pair must reside in
+`C:\Users\youraccount\.ssh\`
+
+after that copy the contents of  `C:\Users\Artur.Mamaliga\.ssh\id_rsa.pub`
+to `~/.ssh/known_hosts` on **Linux** 
+or `C:\Users\Artur.Mamaliga\.ssh\known_hosts` on **Windows**
+
+after that you can do 
+Command
+```
+sudo systemctl reload ssh
+```
 ### SSH from linux to *
 
 First generate key on Linux machine with 
