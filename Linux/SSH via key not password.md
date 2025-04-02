@@ -1,12 +1,17 @@
 
 ### Windows ssh to Linux
-First generate key on Linux machine with `ssh-keygen -t rsa`
+First generate key on Linux machine with 
+
+Command:
+```
+ssh-keygen -t rsa
+```
 
 Explanation of command:
 - `ssh-keygen`: the tool to create SSH keys.
 - `-t rsa`: specifies the **type** of key to generate — in this case, RSA
 
-The example output:
+The example output (i used no password for this key):
 ```
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/art/.ssh/id_rsa):
