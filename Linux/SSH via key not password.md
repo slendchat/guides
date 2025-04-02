@@ -17,8 +17,8 @@ The key pair must reside in
 `C:\Users\youraccount\.ssh\`
 
 after that copy the contents of  `C:\Users\Artur.Mamaliga\.ssh\id_rsa.pub`
-to `~/.ssh/known_hosts` on **Linux** 
-or `C:\Users\Artur.Mamaliga\.ssh\known_hosts` on **Windows**
+to `~/.ssh/authorized_keys` on **Linux** 
+???or `C:\Users\Artur.Mamaliga\.ssh\authorized_keys` on **Windows**
 
 after that you can do 
 Command
