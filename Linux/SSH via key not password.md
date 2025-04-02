@@ -25,6 +25,8 @@ Command
 ```
 sudo systemctl reload ssh
 ```
+
+This guide works on windows using SSH via command line, if you are using putty, you should manually add private keys in program.
 ### SSH from linux to *
 
 First generate key on Linux machine with 
