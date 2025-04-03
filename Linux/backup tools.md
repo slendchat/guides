@@ -69,3 +69,11 @@ To back up **/home** to a directory named **/recovery/backups** on a remote 
 rdump 0uf fileserver09:/recovery/backups /home
 ```
 
+|Option|Description|
+|---|---|
+|r|Extract the entire archive to the current directory.|
+|f|The next object is the backup job location.|
+|t|List the names found in the archive.|
+|C|Compare the archive with the current directory.|
+|x|Extract only the specified files instead of the entire archive.|
+|v|Display verbose output.|
