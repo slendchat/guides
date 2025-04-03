@@ -66,7 +66,7 @@ running from level 0 to level 9 in days or weeks provide incremental backup.
 
 To back up **/home** to a directory named **/recovery/backups** on a remote server named fileserver09, type the following.
 ```
-rdump 0uf fileserver09:/recovery/backups /home
+rdump 0uf fileserver:/recovery/backups /home
 ```
 
 |Option|Description|
@@ -77,3 +77,7 @@ rdump 0uf fileserver09:/recovery/backups /home
 |C|Compare the archive with the current directory.|
 |x|Extract only the specified files instead of the entire archive.|
 |v|Display verbose output.|
+Restore from a network location with `rrestore`
+```
+rrestore rf fileserver:/recovery/backups
+```
