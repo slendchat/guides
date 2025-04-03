@@ -57,6 +57,11 @@ blkid           # UUID и типы ФС
 
 ## LVM
 
+scanning the system for block devices that LVM can access and manage.
+```
+sudo lvmdiskscan
+```
+
 
 
 > ![[LVM_scheme.png]]
