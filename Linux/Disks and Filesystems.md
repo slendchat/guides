@@ -88,6 +88,8 @@ The following command adds the physical volume `/dev/sdf1` to the volume group
 vgextend LVMVolGroup /dev/sda
 ```
 
+To create logical volumes, use the `lvcreate` command.
+
 
 
 > ![[LVM_scheme.png]]
