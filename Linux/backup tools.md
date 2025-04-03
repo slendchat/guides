@@ -52,6 +52,7 @@ rsync -a --exclude=<шаблон_для_исключения> <источник>
 
 Приведённый выше параметр -а эквивалентен набору -rlptgoD.
 
+---
 ### Dump
 Dump requires ext2, ext3 or ext4 file systems.
 Basic dump syntax is as follows.
@@ -60,9 +61,24 @@ dump parameters destination-target source-target
 ```
 
 The **destination-target** is where the backup job will be stored. The **source-target** is the file system you're backing up.
-A level 0 backup is a full backup job.
-at level 3 will grab any new or changed files since the level 2 backup.
-running from level 0 to level 9 in days or weeks provide incremental backup.
+
+Let's say you do:
+`dump -0 -f full.dump /`
+
+➡️ full backup (level 0)
+`dump -1 -f inc1.dump /`
+
+➡️ backs up only files **changed since level 0**
+`dump -2 -f inc2.dump /`
+
+➡️ backs up files **changed since last level <2**, so level 1 in this case
+
+Basic restore syntax is as follows.
+```
+restore rf backup-source
+```
+
+---
 
 To back up **/home** to a directory named **/recovery/backups** on a remote server named fileserver09, type the following.
 ```
@@ -81,3 +97,7 @@ Restore from a network location with `rrestore`
 ```
 rrestore rf fileserver:/recovery/backups
 ```
+
+#### 💡Use case:
+
+Useful for tape backups or old-school backup systems, not really modern. These days most people use `rsync`, `borg`, `restic`, etc.
