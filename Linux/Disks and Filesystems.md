@@ -150,7 +150,10 @@ mount /dev/my_vg/my_lv /mnt/mydata
 #### Расширение тома
 ```
 lvextend -L +5G /dev/my_vg/my_lv
-resize2fs /dev/my_vg/my_lv  # если ext4
+resize2fs /dev/my_vg/my_lv                # если ext4
+xfs_growfs /mnt/mydata                    # если xfs
+btrfs filesystem resize max /mnt/mydata   # если btrfs
+f2fs_resize /dev/my_vg/my_lv
 ```
 
 #### Проверка
