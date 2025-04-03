@@ -128,3 +128,35 @@ sudo mount /dev/LVMVolGroup/www /mnt/www
 sudo mount /dev/LVMVolGroup/db /mnt/db
 sudo mount /dev/LVMVolGroup/workspace /mnt/workspace
 ```
+
+### Summary
+
+#### Типовой процесс:
+```
+# Инициализация физического тома
+pvcreate /dev/sdX
+
+# Создание группы томов
+vgcreate my_vg /dev/sdX
+
+# Создание логического тома
+lvcreate -L 10G -n my_lv my_vg
+
+# Форматирование и монтирование
+mkfs.ext4 /dev/my_vg/my_lv
+mount /dev/my_vg/my_lv /mnt/mydata
+```
+
+#### Расширение тома
+```
+lvextend -L +5G /dev/my_vg/my_lv
+resize2fs /dev/my_vg/my_lv  # если ext4
+```
+
+#### Проверка
+```
+pvs     # физ. тома
+vgs     # группы
+lvs     # лог. тома
+```
+
