@@ -57,6 +57,8 @@ blkid           # UUID и типы ФС
 
 ## LVM
 
+![[LVM_scheme.png]]
+
 scanning the system for block devices that LVM can access and manage.
 ```
 sudo lvmdiskscan
@@ -126,7 +128,3 @@ sudo mount /dev/LVMVolGroup/www /mnt/www
 sudo mount /dev/LVMVolGroup/db /mnt/db
 sudo mount /dev/LVMVolGroup/workspace /mnt/workspace
 ```
-
-
-
-> ![[LVM_scheme.png]]
