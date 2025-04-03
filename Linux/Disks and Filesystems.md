@@ -95,6 +95,15 @@ sudo lvcreate -L 5G -n www LVMVolGroup
 sudo lvcreate -L 20G -n db LVMVolGroup
 ```
 
+You can view the logical volumes and their relationship to the volume group by selecting a custom output from the `vgs` command:
+```
+sudo vgs -o +lv_size,lv_name
+```
+
+
+```
+sudo lvcreate -l 100%FREE -n workspace LVMVolGroup
+```
 
 
 
