@@ -5,6 +5,8 @@
 5. [[Архивация]]
 6. [[stdin stderr stdout]]
 7. [[Disks and Filesystems]]
+8. [[SWAP]]
+9. [[BOOT and Kernel]]
 
 
 
