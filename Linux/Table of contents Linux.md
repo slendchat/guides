@@ -3,6 +3,8 @@
 3. [[Using Netstat]]
 4. [[rsync]]
 5. [[Архивация]]
+6. [[stdin stderr stdout]]
+7. 
 
 
 
