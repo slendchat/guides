@@ -21,6 +21,8 @@ command 2> error.log
 ```
 command > all.log 2>&1
 ```
+- `> all.log`: redirect **stdout (1)** to `all.log`
+- `2>&1`: redirect **stderr (2)** to where stdout (1) is go
 
 4. Append instead of overwrite
 ```
