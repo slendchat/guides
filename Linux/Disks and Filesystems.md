@@ -151,9 +151,9 @@ mount /dev/my_vg/my_lv /mnt/mydata
 ```
 lvextend -L +5G /dev/my_vg/my_lv
 resize2fs /dev/my_vg/my_lv                # если ext4
-xfs_growfs /mnt/mydata                    # если xfs
+xfs_growfs /mnt/mydata                    # если xfs Только онлайн-расширение
 btrfs filesystem resize max /mnt/mydata   # если btrfs
-f2fs_resize /dev/my_vg/my_lv
+f2fs_resize /dev/my_vg/my_lv              # если f2fs Только онлайн-расширение
 ```
 
 #### Проверка
