@@ -100,7 +100,7 @@ You can view the logical volumes and their relationship to the volume group by s
 sudo vgs -o +lv_size,lv_name
 ```
 
-
+Command to create workspace volume using `-l` flag occupying 100%FREE space
 ```
 sudo lvcreate -l 100%FREE -n workspace LVMVolGroup
 ```
