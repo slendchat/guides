@@ -54,3 +54,9 @@ rsync -a --exclude=<шаблон_для_исключения> <источник>
 
 ### Dump
 Dump requires ext2, ext3 or ext4 file systems.
+Basic dump syntax is as follows.
+```
+dump parameters destination-target source-target
+```
+
+The **destination-target** is where the backup job will be stored. The **source-target** is the file system you're backing up.
