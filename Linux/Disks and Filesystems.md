@@ -89,6 +89,12 @@ vgextend LVMVolGroup /dev/sda
 ```
 
 To create logical volumes, use the `lvcreate` command.
+```
+sudo lvcreate -L 10G -n projects LVMVolGroup
+sudo lvcreate -L 5G -n www LVMVolGroup
+sudo lvcreate -L 20G -n db LVMVolGroup
+```
+
 
 
 
