@@ -56,3 +56,7 @@ blkid           # UUID и типы ФС
 ```
 
 ## LVM
+
+
+
+> ![[LVM_scheme.png]]
