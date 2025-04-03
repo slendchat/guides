@@ -101,3 +101,4 @@ rrestore rf fileserver:/recovery/backups
 #### 💡Use case:
 
 Useful for tape backups or old-school backup systems, not really modern. These days most people use `rsync`, `borg`, `restic`, etc.
++doesn't work with lvm.
