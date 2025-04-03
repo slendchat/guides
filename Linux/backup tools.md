@@ -52,3 +52,5 @@ rsync -a --exclude=<шаблон_для_исключения> <источник>
 
 Приведённый выше параметр -а эквивалентен набору -rlptgoD.
 
+### Dump
+Dump requires ext2, ext3 or ext4 file systems.
