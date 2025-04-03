@@ -20,7 +20,7 @@
 - Efficient handling of large files and file systems.
 - Excellent performance for parallel I/O operations.
 - Robust journaling for data protection.
-## **F2FS
+## **F2FS**
 
 F2FS is optimized for use with flash-based storage devices like SSDs and eMMC.
 It aims to minimize write amplification and extend the lifespan of flash storage by reducing unnecessary writes.
