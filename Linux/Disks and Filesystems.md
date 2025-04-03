@@ -62,6 +62,29 @@ scanning the system for block devices that LVM can access and manage.
 sudo lvmdiskscan
 ```
 
+To create physical volume
+```
+sudo pvcreate /dev/sda /dev/sdb
+```
+
+Output 
+  Physical volume "/dev/sda" successfully created
+
+```
+sudo pvs
+```
+Output
+  PV              VG             Fmt     Attr   PSize      PFree
+  /dev/sda3  ubuntu-vg lvm2   a--    18.22g    0
+
+Create a volume group.
+Most of the time, you only have a single volume group per system for maximum flexibility in allocation.
+
+```
+sudo vgcreate LVMVolGroup /dev/sda 
+```
+
+
 
 
 > ![[LVM_scheme.png]]
