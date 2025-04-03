@@ -63,3 +63,9 @@ The **destination-target** is where the backup job will be stored. The **sour
 A level 0 backup is a full backup job.
 at level 3 will grab any new or changed files since the level 2 backup.
 running from level 0 to level 9 in days or weeks provide incremental backup.
+
+To back up **/home** to a directory named **/recovery/backups** on a remote server named fileserver09, type the following.
+```
+rdump 0uf fileserver09:/recovery/backups /home
+```
+
