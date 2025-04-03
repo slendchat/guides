@@ -114,7 +114,18 @@ sudo mkfs.ext4 /dev/LVMVolGroup/db
 sudo mkfs.ext4 /dev/LVMVolGroup/workspace
 ```
 
+After formatting, create mount points:
+```
+sudo mkdir -p /mnt/{projects,www,db,workspace}
+```
 
+Then mount the logical volumes to the appropriate location:
+```
+sudo mount /dev/LVMVolGroup/projects /mnt/projects
+sudo mount /dev/LVMVolGroup/www /mnt/www
+sudo mount /dev/LVMVolGroup/db /mnt/db
+sudo mount /dev/LVMVolGroup/workspace /mnt/workspace
+```
 
 
 
