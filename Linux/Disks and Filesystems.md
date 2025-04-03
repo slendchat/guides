@@ -105,6 +105,17 @@ Command to create workspace volume using `-l` flag occupying 100%FREE space
 sudo lvcreate -l 100%FREE -n workspace LVMVolGroup
 ```
 
+To format your four logical volumes with the Ext4 filesystem, run the following commands:
+
+```
+sudo mkfs.ext4 /dev/LVMVolGroup/projects
+sudo mkfs.ext4 /dev/LVMVolGroup/www
+sudo mkfs.ext4 /dev/LVMVolGroup/db
+sudo mkfs.ext4 /dev/LVMVolGroup/workspace
+```
+
+
+
 
 
 > ![[LVM_scheme.png]]
