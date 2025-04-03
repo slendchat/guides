@@ -68,5 +68,7 @@ openssl x509 -noout -text -in certificate.crt
 
 check cert against private key:
 ```
-
+openssl x509 -noout -modulus -in certificate.crt | openssl md5
+openssl rsa -noout -modulus -in private.key | openssl md5
 ```
+if hash sums are equal the key and the certificate matches. 
