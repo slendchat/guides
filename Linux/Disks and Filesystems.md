@@ -79,11 +79,14 @@ Output
 
 Create a volume group.
 Most of the time, you only have a single volume group per system for maximum flexibility in allocation.
-
 ```
 sudo vgcreate LVMVolGroup /dev/sda 
 ```
 
+The following command adds the physical volume `/dev/sdf1` to the volume group `vg1`.
+```
+vgextend LVMVolGroup /dev/sda
+```
 
 
 
