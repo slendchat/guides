@@ -60,3 +60,13 @@ Go to http://domain_serv/certsrv/
 Copy the chain certificate to server and connect it to Apache or Nginx
 or move to default directory for trusted Certs, but this is another topic.
 
+## Useful
+view info about cert:
+```
+openssl x509 -noout -text -in certificate.crt
+```
+
+check cert against private key:
+```
+
+```
