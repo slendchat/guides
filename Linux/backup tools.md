@@ -60,3 +60,6 @@ dump parameters destination-target source-target
 ```
 
 The **destination-target** is where the backup job will be stored. The **source-target** is the file system you're backing up.
+A level 0 backup is a full backup job.
+at level 3 will grab any new or changed files since the level 2 backup.
+running from level 0 to level 9 in days or weeks provide incremental backup.
