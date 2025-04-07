@@ -1,4 +1,4 @@
-
+# BOOT - GRUB
 Grub main configuration file is located at `/boot/grub/grub.cfg`, but you shouldn't edit it.
 
 Grub settings that can be changed are located at `/etc/default/grub`
@@ -44,4 +44,50 @@ Grub configuration is created by running the `update-grub` or `grub2-mkconfig` -
 `sudo update-grub`
 - Regenerates `/boot/grub/grub.cfg` with updated settings.
 
+---
+
+# System Info
+
+To get info about operating system
+`cat /etc/*release`
+Example:
+```
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.1 LTS"
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.1 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+```
+
+To get info about system
+`hostnamectl`
+Example:
+```
+ Static hostname: vm1usm
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: b21f0dc0dc7949d6b9d8d568b63fbd31
+         Boot ID: cfc27d92f64349a6ab41cd832e3b7b4b
+  Virtualization: vmware
+Operating System: Ubuntu 24.04.1 LTS
+          Kernel: Linux 6.8.0-57-generic
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
+  Hardware Model: VMware Virtual Platform
+Firmware Version: 6.00
+   Firmware Date: Thu 2020-11-12
+    Firmware Age: 4y 4month 3w 3d
+```
 
