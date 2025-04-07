@@ -115,6 +115,11 @@ and append the line:
 ```
 UUID=31f39d50-16fa-4248-b396-0cba7cd6eff2 /mnt/mnt1 auto rw,user,auto 0 0
 ```
+
+or
+```
+/dev/disk/by-uuid/1f5d1c67-9921-49df-a896-410526aa4df9 /media/Data ext4 defaults,auto 0 2
+```
 (and afterwards give a empty new line to avoid warnings).
 
 To mount the partition, open a terminal and run:
