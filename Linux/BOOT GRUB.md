@@ -44,3 +44,7 @@ Grub configuration is created by running the `update-grub` or `grub2-mkconfig` -
 `sudo update-grub`
 - Regenerates `/boot/grub/grub.cfg` with updated settings.
 
+
+# Systemd boot process
+
+`systemd-analyze` - 
