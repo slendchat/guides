@@ -70,4 +70,9 @@ Example:
 
 # Partitions automount
 
-
+`/etc/fstab` - file describes what drives and partitions should be mounted at boot.
+```
+cat /etc/fstab
+# UUID=... /mnt/data ext4 defaults 0 2
+```
+For errors check `journalctl -b` or `mount -a`
