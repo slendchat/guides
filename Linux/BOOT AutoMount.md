@@ -147,4 +147,4 @@ sudo findmnt --verify
 ```
 
 
-utility named `grubby` is supported only on RHEL based destribution, ubuntu or debian does not support this.
+Utility named `grubby` is supported only on RHEL based destribution, ubuntu or debian does not support this.
