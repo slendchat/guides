@@ -47,4 +47,25 @@ Grub configuration is created by running the `update-grub` or `grub2-mkconfig` -
 
 # Systemd boot process
 
-`systemd-analyze` - 
+`systemd-analyze` - system load time
+Example:
+```
+Startup finished in 13.085s (kernel) + 22.082s (userspace) = 35.168s
+graphical.target reached after 22.019s in userspace.
+```
+
+`systemd-analyze blame` — покажет **список юнитов**, отсортированный по времени запуска (что тормозит загрузку).
+Example:
+```
+12.379s snap.docker.nvidia-container-toolkit.service
+11.437s snapd.seeded.service
+11.179s snapd.service
+...
+```
+
+`systemctl status` — общая сводка состояния системы и systemd.
+
+`systemctl list-units --failed` — список **упавших/неудачных** сервисов.
+- useful to use after boot - it is clearly seen what didn't startup.
+
+
