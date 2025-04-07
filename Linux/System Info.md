@@ -69,8 +69,8 @@ Example:
 - `inxi -Fxz` - Full system overview (hardware + software)
 
 ### Dmesg, journalctl
-- `dmesg | less` — сообщения ядра
-- `journalctl -b` — логи текущей загрузки
+- `dmesg | less` — kernel messages
+- `journalctl -b` — current running system logs
 
 ### Uptime, users
 - `uptime`, `who`, `w`, `last`
