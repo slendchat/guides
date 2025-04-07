@@ -80,3 +80,6 @@ cat /etc/fstab
 # UUID=... /mnt/data ext4 defaults 0 2
 ```
 For errors check `journalctl -b` or `mount -a`
+
+Linux prefers to use `UUID` (**Universally Unique Identifier**), LABEL, or symlinks to identify media storage devices on a system
+
