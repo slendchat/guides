@@ -60,8 +60,13 @@ Example:
 
 
 ### Info CPU, RAM, HDD
-- `lscpu`, `free -h`, `lsblk`, `df -h`, `inxi -Fxz`
-`lscpu` - full info about cpu
+`lscpu`, `free -h`, `lsblk`, `df -h`, `inxi -Fxz`
+
+- `lscpu` - full info about cpu
+- `free -h` - info about ram and swap
+- `lsblk` - info about disks and partitions
+- `df -h` - filesystem info about free and used space
+- 
 
 ### Dmesg, journalctl
 - `dmesg | less` — сообщения ядра
