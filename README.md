@@ -2,5 +2,5 @@
 [[Table of contents certificates]]
 
 ### Linux guides
-[[Table of contents Linux]]
+[[!Table of contents Linux]]
 
