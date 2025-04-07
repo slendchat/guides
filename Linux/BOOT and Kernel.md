@@ -7,3 +7,4 @@ Scripts and themes for grub are also located in the `/etc/grub.d/`. There's also
 
 Grub configuration is created by running the `update-grub` or `grub2-mkconfig` - combining files from 
 `/etc/default/grub` + `/etc/grub.d/`
+
