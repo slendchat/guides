@@ -9,6 +9,7 @@
 9. [[BOOT AutoMount]]
 10. [[System Info]]
 11. [[Upgrade destributive]]
+12. [[Kernel manual update]]
 
 
 
