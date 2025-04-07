@@ -145,3 +145,6 @@ Before the next boot, don't forget to verify the entries! On any error in the `
 ```
 sudo findmnt --verify
 ```
+
+
+utility named `grubby` is supported only on RHEL based destribution, ubuntu or debian does not support this.
