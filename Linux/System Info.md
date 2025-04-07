@@ -89,4 +89,9 @@ Example:
 - `journalctl -xe` → последние ошибки в live-режиме
 
 ### Uptime, users
-- `uptime`, `who`, `w`, `last`
+`uptime`, `who`, `w`, `last`
+
+`uptime` - shows uptime and load average with current active users
+- Проверить, сколько сервер/ПК в аптайме.
+- Смотреть, не перегружен ли проц
+- `who` 
