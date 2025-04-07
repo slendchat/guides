@@ -8,7 +8,7 @@
 8. [[SWAP]]
 9. [[BOOT AutoMount]]
 10. [[System Info]]
-11. 
+11. [[Upgrade destributive]]
 
 
 
