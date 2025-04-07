@@ -1,5 +1,6 @@
 Go to https://kernel.ubuntu.com/mainline/
 choose the version you need.
+also before installing check if there is enough space on `/boot` partition
 download
 ```
 linux-modules-6.14.0-061400-generic_6.14.0-061400.202503241442_amd64.deb
