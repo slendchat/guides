@@ -62,11 +62,11 @@ Example:
 ### Info CPU, RAM, HDD
 `lscpu`, `free -h`, `lsblk`, `df -h`, `inxi -Fxz`
 
-- `lscpu` - full info about cpu
-- `free -h` - info about ram and swap
-- `lsblk` - info about disks and partitions
-- `df -h` - filesystem info about free and used space
-- `inxi -Fxz` - accumulates all info about system, hardware and partitions.
+- `lscpu` - CPU details
+- `free -h` - RAM and swap usage
+- `lsblk` - Disks and partitions
+- `df -h` - Mounted filesystems usage
+- `inxi -Fxz` - Full system overview (hardware + software)
 
 ### Dmesg, journalctl
 - `dmesg | less` — сообщения ядра
