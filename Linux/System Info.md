@@ -1,4 +1,4 @@
-# System Info
+# System Info (kernel os)
 
 - To get info about operating system
 `cat /etc/*release`
@@ -58,3 +58,14 @@ Example:
 |`ii`|`linux-image-6.8.0-57-generic`|6.8.0-57.59|amd64|**Установлен, возможно, текущий**|
 |`ii`|`linux-image-generic`|6.8.0-57.59|amd64|**Мета-пакет** (указывает на последнее стабильное ядро)|
 
+
+### Info CPU, RAM, HDD
+- `lscpu`, `free -h`, `lsblk`, `df -h`, `inxi -Fxz`
+`lscpu` - full info about cpu
+
+### Dmesg, journalctl
+- `dmesg | less` — сообщения ядра
+- `journalctl -b` — логи текущей загрузки
+
+### Uptime, users
+- `uptime`, `who`, `w`, `last`
