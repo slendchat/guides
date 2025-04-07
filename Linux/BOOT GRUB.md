@@ -68,6 +68,10 @@ Example:
 `systemctl list-units --failed` — список **упавших/неудачных** сервисов.
 - useful to use after boot - it is clearly seen what didn't startup.
 
+Compare systemd vs init.
+- `systemd` is the modern init system (faster, parallel, better logging).
+- `init` (SysV) is older (sequential, shell scripts).
+
 # Partitions automount
 
 `/etc/fstab` - file describes what drives and partitions should be mounted at boot.
