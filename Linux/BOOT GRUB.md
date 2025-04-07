@@ -68,4 +68,6 @@ Example:
 `systemctl list-units --failed` — список **упавших/неудачных** сервисов.
 - useful to use after boot - it is clearly seen what didn't startup.
 
+# Partitions automount
+
 
