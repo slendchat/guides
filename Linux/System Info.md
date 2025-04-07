@@ -91,11 +91,17 @@ Example:
 ### Uptime, users
 `uptime`, `who`, `w`, `last`
 
-`uptime` - shows uptime and load average with current active users
+`uptime` — shows how long the system has been running and system load.
 - Проверить, сколько сервер/ПК в аптайме.
 - Смотреть, не перегружен ли проц
 
-`who`  - who is logged in now
+`who` — shows currently logged-in users.
 - Проверить, кто в системе в данный момент.
 - Полезно для SSH-сессий на серверах.
 
+`w` — shows who is logged in and what they are doing.
+- Посмотреть активность юзеров: кто чем занят, idle ли, какие команды.
+
+`last` — shows login history (logins, shutdowns, reboots).
+- Узнать, кто и когда логинился.
+- Проверить перезагрузки (`last reboot`).
