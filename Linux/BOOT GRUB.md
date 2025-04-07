@@ -83,3 +83,50 @@ For errors check `journalctl -b` or `mount -a`
 
 Linux prefers to use `UUID` (**Universally Unique Identifier**), LABEL, or symlinks to identify media storage devices on a system
 
+1. Create a directory where the disk will be mounted.
+```
+sudo mkdir /mnt/mnt1
+```
+
+In addition, I would make the user the owner and give him the right to read/write:
+```
+sudo chown [user]:[group] /media/Data
+sudo chmod +rw /media/Data
+```
+
+2. Now the `fstab` entry.
+- Install `libblkid1` to see device specific information:
+```
+sudo apt-get install libblkid1
+ ```
+
+- Enter `sudo blkid` to see UUID of disks
+```
+/dev/sda2: UUID="32a4b76f-246e-486e-8495-31b8a781fb4c" TYPE="swap" 
+/dev/sda1: UUID="31f39d50-16fa-4248-b396-0cba7cd6eff2" TYPE="ext4"
+```
+
+- Then we create the `fstab` entry:
+```
+sudo vim /etc/fstab
+```
+
+and append the line:
+```
+UUID=31f39d50-16fa-4248-b396-0cba7cd6eff2 /mnt/mnt1 auto rw,user,auto 0 0
+```
+(and afterwards give a empty new line to avoid warnings).
+
+To mount the partition, open a terminal and run:
+
+```
+mount /mnt/mnt1
+```
+
+Because of the entry `auto` it should be mounted automatically on next boot.
+
+Before the next boot, don't forget to verify the entries! On any error in the `fstab` file, the system will not start and you will need to recover it, by reverting the changes. You can verify the entries with:
+
+```
+sudo findmnt --verify
+```
