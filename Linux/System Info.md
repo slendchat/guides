@@ -67,6 +67,7 @@ Example:
 - `lsblk` - Disks and partitions
 - `df -h` - Mounted filesystems usage
 - `inxi -Fxz` - Full system overview (hardware + software)
+- `du` - size of dirs in current folder
 
 ### Dmesg, journalctl
 
