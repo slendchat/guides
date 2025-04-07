@@ -18,3 +18,7 @@ and
 sudo update-grub
 sudo reboot now
 ```
+
+Если ты просто тестируешь новое ядро (например, 6.14 от Canonical), `unsigned` — норм.  
+Если система с UEFI + Secure Boot, и ты хочешь чтобы ядро грузилось без танцев — ставь `signed`.
+
