@@ -7,6 +7,8 @@
 7. [[Disks and Filesystems]]
 8. [[SWAP]]
 9. [[BOOT GRUB]]
+10. [[System Info]]
+11. 
 
 
 
