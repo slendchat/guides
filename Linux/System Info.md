@@ -66,7 +66,7 @@ Example:
 - `free -h` - info about ram and swap
 - `lsblk` - info about disks and partitions
 - `df -h` - filesystem info about free and used space
-- 
+- `inxi -Fxz` - accumulates a
 
 ### Dmesg, journalctl
 - `dmesg | less` — сообщения ядра
