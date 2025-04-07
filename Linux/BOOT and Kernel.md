@@ -48,7 +48,7 @@ Grub configuration is created by running the `update-grub` or `grub2-mkconfig` -
 
 # System Info
 
-To get info about operating system
+- To get info about operating system
 `cat /etc/*release`
 Example:
 ```
@@ -71,7 +71,7 @@ UBUNTU_CODENAME=noble
 LOGO=ubuntu-logo
 ```
 
-To get info about system
+- To get info about system
 `hostnamectl`
 Example:
 ```
@@ -90,4 +90,19 @@ Firmware Version: 6.00
    Firmware Date: Thu 2020-11-12
     Firmware Age: 4y 4month 3w 3d
 ```
+
+- Info about kernel
+`uname -r`
+Example:
+`6.8.0-57-generic`
+
+- debian/ubuntu
+`dpkg -l | grep linux-image`
+
+|Статус|Пакет|Версия|Архитектура|Комментарий|
+|---|---|---|---|---|
+|`rc`|`linux-image-6.8.0-53-generic`|6.8.0-53.55|amd64|**Удалён, но остались конфиги**|
+|`ii`|`linux-image-6.8.0-54-generic`|6.8.0-54.56|amd64|**Установлен и активен**|
+|`ii`|`linux-image-6.8.0-57-generic`|6.8.0-57.59|amd64|**Установлен, возможно, текущий**|
+|`ii`|`linux-image-generic`|6.8.0-57.59|amd64|**Мета-пакет** (указывает на последнее стабильное ядро)|
 
