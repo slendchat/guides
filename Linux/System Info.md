@@ -94,4 +94,8 @@ Example:
 `uptime` - shows uptime and load average with current active users
 - Проверить, сколько сервер/ПК в аптайме.
 - Смотреть, не перегружен ли проц
-- `who` 
+
+`who`  - who is logged in now
+- Проверить, кто в системе в данный момент.
+- Полезно для SSH-сессий на серверах.
+
