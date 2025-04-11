@@ -399,3 +399,50 @@ To add a column in a table, use the following syntax:
 ALTER TABLE _table_name_  
 ADD _column_name datatype_;
 ```
+
+DROP
+```
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
+
+RENAME
+```
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+```
+
+change data type
+ - SQL Server / MS Access:
+```
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+```
+ 
+ - My SQL / Oracle (prior version 10G):
+```
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;
+```
+
+ - Oracle 10G and later:
+```
+ALTER TABLE table_name
+MODIFY column_name datatype;
+```
+
+## SQL Constraints
+
+Constraints are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted.
+
+Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+
+The following constraints are commonly used in SQL:
+
+- `[NOT NULL]` - Ensures that a column cannot have a NULL value
+- `[UNIQUE]` - Ensures that all values in a column are different
+- `[PRIMARY KEY]` - A combination of a `NOT NULL` and `UNIQUE`. Uniquely identifies each row in a table
+- `[FOREIGN KEY]` - Prevents actions that would destroy links between tables
+- `[CHECK]` - Ensures that the values in a column satisfies a specific condition
+- `[DEFAULT]` - Sets a default value for a column if no value is specified
+- `[CREATE INDEX]` - Used to create and retrieve data from the database very quickly
