@@ -7,7 +7,13 @@
 	SET column1 = value1, column2 = value2, ...
 	WHERE condition;
 ```
+
 - `DELETE` - **deletes** data from a database
+  Syntax:
+```
+DELETE FROM table_name WHERE condition;
+```
+
 - `INSERT INTO` - **inserts** new data into a database
  Syntax:
 ```
