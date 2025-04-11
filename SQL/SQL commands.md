@@ -222,7 +222,7 @@ FROM Products
 WHERE TRUE;
 ```
 
-Example: (lists the ProductName if ALL the records in the OrderDetails table has Quantity equal to 10.)
+Example: (lists the ProductName if ALL the records in the OrderDetails has Quantity equal to 10.)
 ```
 SELECT ProductName  
 FROM Products  
@@ -231,3 +231,44 @@ WHERE ProductID = ALL
   FROM OrderDetails  
   WHERE Quantity = 10);
 ```
+
+The `SELECT INTO` statement copies data from one table into a new table.
+Syntax:
+Copy all columns into a new table:
+```
+SELECT *
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;
+```
+
+Copy only some columns into a new table:
+```
+SELECT column1, column2, column3, ...
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;
+```
+
+
+The `INSERT INTO SELECT` statement copies data from one table and inserts it into another table.
+The `INSERT INTO SELECT` statement requires that the data types in source and target tables match.
+Syntax:
+Copy all columns from one table to another table:
+```
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+```
+
+Copy only some columns from one table into another table:
+```
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
+```
+
+
+The `CASE` expression goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the `ELSE` clause.
+If there is no `ELSE` part and no conditions are true, it returns NULL.
