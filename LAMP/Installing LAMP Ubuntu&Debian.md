@@ -4,3 +4,5 @@ Install APACHE2
 ```
 sudo apt install apache2
 ```
+
+Optional configure firewall `ufw`
