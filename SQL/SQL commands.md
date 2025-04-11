@@ -14,7 +14,13 @@
 - `WHERE` clause is used to filter records. (WHERE Country='Mexico';)
 - `ORDER BY` keyword is used to sort the result-set in ascending or descending order.
   Syntax
-	`SELECT _column1_, _column2, ...
-	FROM _able_name   ORDER BY _column1, column2, ..._ ASC|DESC;`
- - 
+```
+	SELECT _column1_, _column2, ...
+	FROM table_name   
+	ORDER BY _column1, column2, ... ASC|DESC;
+```
+ - The `WHERE` clause can contain one or many `AND` operators.
+ - The `WHERE` clause can contain one or more `OR` operators.
+ - The `NOT` operator is used in combination with other operators to give the opposite result, also called the negative result.
+   
 
