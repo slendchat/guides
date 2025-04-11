@@ -149,7 +149,7 @@ INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
 | ![[Pasted image 20250411102553.png]] | ![[Pasted image 20250411102603.png]] | ![[Pasted image 20250411102605.png]] | ![[Pasted image 20250411102609.png]] |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 
-## The SQL UNION, GROUP BY, HAVING Operator
+## The SQL UNION, GROUP BY, HAVING, EXISTS Operator
 
 The `UNION` operator is used to combine the result-set of two or more `SELECT` statements.
 - Every `SELECT` statement within `UNION` must have the same number of columns
@@ -191,4 +191,11 @@ FROM table_name
 WHERE EXISTS
 (SELECT column_name FROM table_name WHERE condition);
 ```
+
+# SQL ANY and ALL Operators
+The `ANY` and `ALL` operators allow you to perform a comparison between a single column value and a range of other values.
+The `ANY` operator:
+- returns a boolean value as a result
+- returns TRUE if ANY of the subquery values meet the condition
+!`ANY` means that the condition will be true if the operation is true for any of the values in the range.!
 
