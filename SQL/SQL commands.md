@@ -1,4 +1,4 @@
-
+# Basic commands
 - `SELECT` - **extracts** data from a database
 - `UPDATE` - **updates** data in a database
   Syntax:
@@ -73,3 +73,62 @@ Syntax:
 	SELECT MAX(Price)
 	FROM Products;
 ```
+
+The `LIKE` operator is used in a `WHERE` clause to search for a specified pattern in a column.
+There are two wildcards often used in conjunction with the `LIKE` operator:
+-  The percent sign `%` represents zero, one, or multiple characters
+-  The underscore sign `_` represents one, single character
+
+| Symbol | Description                                                  |
+| ------ | ------------------------------------------------------------ |
+| %      | Represents zero or more characters                           |
+| _      | Represents a single character                                |
+| []     | Represents any single character within the brackets *        |
+| ^      | Represents any character not in the brackets *               |
+| -      | Represents any single character within the specified range * |
+| {}     | Represents any escaped character **                          |
+
+ - * Not supported in PostgreSQL and MySQL databases.
+ - ** Supported only in Oracle databases.
+
+Syntax:
+```
+	SELECT _column1, column2, ..._  
+	FROM _table_name_  
+	WHERE _columnN_ LIKE _pattern_;
+```
+
+ - The `IN` operator allows you to specify multiple values in a `WHERE` clause.
+   The `IN` operator is a shorthand for multiple `OR` conditions.
+   Syntax:
+```
+	SELECT _column_name(s)_  
+	FROM _table_name_  
+	WHERE _column_name_ IN (_value1_, _value2_, ...);
+```
+
+ - The `BETWEEN` operator selects values within a given range. The values can be numbers, text, or dates. The `BETWEEN` operator is inclusive: begin and end values are included.
+   Example:
+```
+	SELECT * FROM Products
+	WHERE Price BETWEEN 10 AND 20;
+```
+
+
+# SQL Aliases
+SQL aliases are used to give a table, or a column in a table, a temporary name.
+An alias is created with the `AS` keyword.
+Example:
+```
+SELECT CustomerID AS ID  
+FROM Customers;
+```
+
+Actually, in most database languages, you can skip the AS keyword and get the same result:
+```
+SELECT CustomerID ID  
+FROM Customers;
+```
+
+
+# SQL Joins
