@@ -4,3 +4,8 @@
 ### Linux guides
 [[!Table of contents Linux]]
 
+### SQL
+[[Table of contents SQL]]
+
+LAMP
+[[Installing LAMP Ubuntu&Debian]]
