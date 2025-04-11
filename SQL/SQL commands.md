@@ -316,4 +316,5 @@ GO;
 Parameters are given with @parameter,  `nvarchar(30)` stands for data type.
 
 # Comments
-comments start 
+comments starts with `--`
+
