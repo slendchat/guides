@@ -22,3 +22,16 @@ Start MySQL secure installation script
 ```
 sudo mysql_secure_installation
 ```
+
+Changing Root user password
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123';
+FLUSH PRIVILEGES;
+```
+
+Installing php with needed modules
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+
+
