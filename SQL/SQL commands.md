@@ -56,3 +56,8 @@ DELETE FROM table_name WHERE condition;
 	WHERE column_name IS NULL;
 ```
 
+ - The `SELECT TOP` clause is used to specify the number of records to return.
+   Syntax:
+```
+ SELECT TOP 3 * FROM Customers;
+```
