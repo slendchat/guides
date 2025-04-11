@@ -1,8 +1,20 @@
 
 - `SELECT` - **extracts** data from a database
 - `UPDATE` - **updates** data in a database
+  Syntax:
+```
+	UPDATE table_name
+	SET column1 = value1, column2 = value2, ...
+	WHERE condition;
+```
 - `DELETE` - **deletes** data from a database
 - `INSERT INTO` - **inserts** new data into a database
+ Syntax:
+```
+	INSERT INTO table_name
+	VALUES (value1, value2, value3, ...);
+```
+ 
 - `CREATE DATABASE` - **creates** a new database
 - `ALTER DATABASE` - **modifies** a database
 - `CREATE TABLE` - **creates** a new table
@@ -30,15 +42,11 @@
 	WHERE NOT condition;
 ```
 
- - The `INSERT INTO` statement is used to insert new records in a table.
-   Syntax:
-```
-	INSERT INTO table_name
-	VALUES (value1, value2, value3, ...);
-```
- 
  -  The `IS NULL` and `IS NOT NULL` operators
    Syntax:
 ```
-
+	SELECT column_names
+	FROM table_name
+	WHERE column_name IS NULL;
 ```
+
