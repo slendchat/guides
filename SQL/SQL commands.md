@@ -149,7 +149,7 @@ INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
 | ![[Pasted image 20250411102553.png]] | ![[Pasted image 20250411102603.png]] | ![[Pasted image 20250411102605.png]] | ![[Pasted image 20250411102609.png]] |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 
-## The SQL UNION, GROUP BY Operator
+## The SQL UNION, GROUP BY, HAVING Operator
 
 The `UNION` operator is used to combine the result-set of two or more `SELECT` statements.
 - Every `SELECT` statement within `UNION` must have the same number of columns
