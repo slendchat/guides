@@ -11,6 +11,10 @@
 - `CREATE INDEX` - **creates** an index (search key)
 - `DROP INDEX` - **deletes** an index
 - `SELECT DISTINCT` statement is used to return only distinct (different) values.
-- 
-
+- `WHERE` clause is used to filter records. (WHERE Country='Mexico';)
+- `ORDER BY` keyword is used to sort the result-set in ascending or descending order.
+  Syntax
+	`SELECT _column1_, _column2, ...
+	FROM _able_name   ORDER BY _column1, column2, ..._ ASC|DESC;`
+ - 
 
