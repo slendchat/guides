@@ -69,3 +69,7 @@ The most commonly used SQL aggregate functions are:
 - `SUM()` - returns the total sum of a numerical column
 - `AVG()` - returns the average value of a numerical column
 Syntax:
+```
+	SELECT MAX(Price)
+	FROM Products;
+```
