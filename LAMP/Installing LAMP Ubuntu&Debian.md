@@ -23,7 +23,7 @@ Start MySQL secure installation script
 sudo mysql_secure_installation
 ```
 
-Changing Root user password
+Changing Root user password manually
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password123';
 FLUSH PRIVILEGES;
