@@ -38,3 +38,16 @@ sudo apt install php libapache2-mod-php php-mysql
 
 List of directives - https://www.php.net/manual/en/ini.list.php
 
+Commonly changed values are:
+`;error_log = php_errors.log` -> `error_log = /var/log/php_errors.log`
+
+
+- `memory_limit = 128M` - Limits how much **RAM a single PHP script** can use.
+- `upload_max_filesize = 128M` - **Maximum file size** a user can upload via a form.
+- `post_max_size = 128M` - Sets the max **total size of POST data** (form fields + files).
+- `max_execution_time = 120` - Maximum **runtime in seconds** for a PHP script before it’s killed.
+
+
+## Supervisor & supervisor.conf
+
+
