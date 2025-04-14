@@ -23,3 +23,7 @@ It will not protect you against flood, fire, physical theft, hardware failure. S
 
 Replicating snapshots to the cloud may not be the best way to accomplish that — you would want to use tools like HyperBackip which will operate on a current filesystem (current snapshot) and create deduplicated, compressed, and encrypted datastore at the destination: this will be faster (compression), take little space (deduplication), and secure (client side encryption)— you don’t want your data in the plain text on a third party cloud you don’t control.
 
+![[snapshots.gif]]
+
+
+https://habr.com/ru/companies/netapp/articles/112367/
