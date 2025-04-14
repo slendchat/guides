@@ -50,4 +50,4 @@ pool 3.debian.pool.ntp.org iburst
 `pool` line tells `ntpd` to sync time with a **group of public ntp server**
 These are DNS round-robin addresses.
 
-`iburst` tells NTP client to send a burst of 4-8 
+`iburst` tells NTP client to send a burst of 4-8 packets 
