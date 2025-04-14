@@ -38,4 +38,5 @@ Install NTP package
 sudo apt install ntp
 ```
 
-Configure 
+Configure NTP servers to use, the config is in file `/etc/ntp.conf`
+Change or comment defau
