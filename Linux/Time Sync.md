@@ -1,3 +1,4 @@
+# Output current time
 Check current time `timedatectl`
 - **Local time**
 	**Описание:** Локальное системное время, отображаемое с учётом текущего часового пояса.
@@ -30,3 +31,11 @@ System clock synchronized: no
               NTP service: n/a
           RTC in local TZ: no
 ```
+
+# Time synchronization with NTP
+Install NTP package
+```bash
+sudo apt install ntp
+```
+
+Configure 
