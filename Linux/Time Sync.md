@@ -100,4 +100,10 @@ Public NTP pools
 - Океания – oceania.pool.ntp.org
 - Россия – ru.pool.ntp.org
 
-## 
+## Apply new NTP rules
+
+After saving configuration in `/etc/ntp.conf`
+Restart the service:
+```
+systemctl restart ntp
+```
