@@ -39,4 +39,12 @@ sudo apt install ntp
 ```
 
 Configure NTP servers to use, the config is in file `/etc/ntp.conf`
-Change or comment defau
+Change or comment default configuration:
+```
+pool 0.debian.pool.ntp.org iburst
+pool 1.debian.pool.ntp.org iburst
+pool 2.debian.pool.ntp.org iburst
+pool 3.debian.pool.ntp.org iburst
+```
+
+`pool` line tells
