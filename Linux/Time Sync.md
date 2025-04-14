@@ -108,7 +108,10 @@ Restart the service:
 systemctl restart ntp
 ```
 
-`ntpq -p` shows the **list of NTP peers** your system is connected or trying to.
+ shows the **list of NTP peers** your system is connected or trying to.
+```
+ntpq -p
+```
 
 - remote – адрес сервера точного времени;
 - refid – вышестоящий сервер;
