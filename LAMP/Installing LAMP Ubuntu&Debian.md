@@ -50,4 +50,55 @@ Commonly changed values are:
 
 ## Supervisor & supervisor.conf
 
+Is a daemon that controls other services.
+`supervisor.conf` is main config file that describes:
+ - What programs to run.
+ - Where to store logs.
+ - Parameters like reloads, dirs and vars.
+ - Controlls them (start/stop/restart)
 
+Work with supervisor:
+```
+# start supervisord
+sudo supervisord -c /etc/supervisord.conf
+
+# process control
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl status
+sudo supervisorctl restart myworker
+```
+
+Where config is stored:
+- Ubuntu/Debian:
+    - main conf: `/etc/supervisor/supervisord.conf`
+    - other programs: `/etc/supervisor/conf.d/*.conf`
+- CentOS/Alma:
+    - `/etc/supervisord.conf` or `/etc/supervisord.d/`
+
+Supervisor.conf example:
+
+```
+[supervisord]
+nodaemon=true
+logfile=/dev/null
+user=root
+
+# apache2
+[program:apache2]
+command=/usr/sbin/apache2ctl -D FOREGROUND
+autostart=true
+autorestart=true
+startretries=3
+stderr_logfile=/proc/self/fd/2
+user=root
+
+# mariadb
+[program:mariadb]
+command=/usr/sbin/mariadbd --user=mysql
+autostart=true
+autorestart=true
+startretries=3
+stderr_logfile=/proc/self/fd/2
+user=mysql
+```
