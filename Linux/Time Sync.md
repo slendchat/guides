@@ -33,10 +33,17 @@ System clock synchronized: no
 ```
 
 # Time synchronization with NTP
+
+Чтобы синхронизировать время, используют демон **ntpd**
+
 Install NTP package
 ```bash
 sudo apt install ntp
 ```
+
+**driftfile /var/lib/ntp/ntp.drift.** В ней указан файл, в котором хранится информация о том, как часто смещается время. В этом же файле содержится и значение, которое было получено из предыдущих изменений времени. Если по каким-то причинам внешние NTP-серверы недоступны, знание берут из этого файла.
+
+Логи синхронизации – **logfile /var/log/ntp.log**.
 
 Configure NTP servers to use, the config is in file `/etc/ntp.conf`
 Change or comment default configuration:
