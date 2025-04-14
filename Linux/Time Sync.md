@@ -33,7 +33,7 @@ System clock synchronized: no
 ```
 
 # Time synchronization with NTP
-
+## Connecting
 Чтобы синхронизировать время, используют демон **ntpd**
 
 Install NTP package
@@ -41,7 +41,9 @@ Install NTP package
 sudo apt install ntp
 ```
 
-**driftfile /var/lib/ntp/ntp.drift.** В ней указан файл, в котором хранится информация о том, как часто смещается время. В этом же файле содержится и значение, которое было получено из предыдущих изменений времени. Если по каким-то причинам внешние NTP-серверы недоступны, знание берут из этого файла.
+**driftfile /var/lib/ntp/ntp.drift.** В ней указан файл, в котором хранится информация о том, как часто смещается время. В этом же файле содержится и значение, которое было получено из предыдущих изменений времени. 
+Файл, в котором `ntpd` хранит информацию об отклонении системных часов.
+Позволяет NTP сохранять точность между перезагрузками.
 
 Логи синхронизации – **logfile /var/log/ntp.log**.
 
@@ -53,8 +55,49 @@ pool 1.debian.pool.ntp.org iburst
 pool 2.debian.pool.ntp.org iburst
 pool 3.debian.pool.ntp.org iburst
 ```
-
-`pool` line tells `ntpd` to sync time with a **group of public ntp server**
 These are DNS round-robin addresses.
 
-Через опцию **iburst** можно увеличить точность синхронизации, то есть указать то, что на сервер необходимо отправлять несколько пакетов вместо одного.
+- `pool` - tells `ntpd` to sync time with a **group of public NTP server**
+- `server`  - connect to a single NTP server
+- `prefer` - preferred NTP server 
+
+Через опцию **iburst** можно увеличить точность синхронизации, то есть указать то, что на сервер необходимо отправлять несколько пакетов (4-8) вместо одного.
+
+## Access rules
+`restrict` - rules of access control
+  Format:
+```
+restrict <ip/net> [mask <subnet>] [options...]
+```
+
+Examples:
+```
+restrict -4 default kod notrap nomodify nopeer noquery
+restrict 127.0.0.1
+restrict ::1
+restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap
+```
+
+|Параметр|Назначение|
+|---|---|
+|`-4`|Ограничение только на IPv4|
+|`default`|Применяется ко всем IP, если не указано иное|
+|`kod`|"Kiss-o'-Death" — если нарушают политику, отправить отказ|
+|`notrap`|Не разрешать установку событийных ловушек (не используется почти нигде)|
+|`nomodify`|Запрет изменять настройки сервера|
+|`nopeer`|Запрет устанавливать симметричную ассоциацию|
+|`noquery`|Запрет всех запросов на чтение (например, `ntpq`)|
+|`restrict 127.0.0.1`|Локальной машине доступ разрешён|
+|`restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap`|К локальной сети — разрешён доступ без права модификации|
+
+## Tips
+Public NTP pools
+- Азия – asia.pool.ntp.org
+- Европа – europe.pool.ntp org
+- Африка – africa.pool.ntp.org
+- Северная Америка – north-america.pool.ntp.org
+- Южная Америка – south-america.pool.ntp.org
+- Океания – oceania.pool.ntp.org
+- Россия – ru.pool.ntp.org
+
+## 
