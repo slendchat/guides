@@ -10,6 +10,8 @@
 10. [[System Info]]
 11. [[Upgrade destributive]]
 12. [[Kernel manual update]]
+13. [[Time Sync]]
+14. 
 
 
 

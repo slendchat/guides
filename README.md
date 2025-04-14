@@ -7,5 +7,8 @@
 ### SQL
 [[Table of contents SQL]]
 
-LAMP
+### LAMP
 [[Installing LAMP Ubuntu&Debian]]
+
+### MISC
+[[!Table of contents misc]]
