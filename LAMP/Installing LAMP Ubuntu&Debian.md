@@ -34,4 +34,7 @@ Installing php with needed modules
 sudo apt install php libapache2-mod-php php-mysql
 ```
 
+## PHP.ini
+
+List of directives - https://www.php.net/manual/en/ini.list.php
 
