@@ -27,3 +27,4 @@ Replicating snapshots to the cloud may not be the best way to accomplish that â€
 
 
 https://habr.com/ru/companies/netapp/articles/112367/
+
