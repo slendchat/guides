@@ -21,6 +21,7 @@
  │    └── [Leaf Node A2] → FileB → [Block#1301]
  └── [Internal Node B]
       ├── [Leaf Node B1] → FileC → [Block#1402]
+...
 ```
 
 Три файла ссылаются на блоки разные блоки. 
