@@ -1,0 +1,1 @@
+Check current time `timedatectl`
