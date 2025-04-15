@@ -24,6 +24,7 @@ apt upgrade
 apt dist-upgrade
 apt full-upgrade
 ```
+reboot
 
 5. Download unifi upgrade script and run it.
 ```
@@ -45,3 +46,13 @@ change `/etc/apt/sources.list`
 deb http://archive.debian.org/debian/ buster main contrib non-free
 ```
 
+8. upgrade to Debian 10
+```
+apt update
+apt upgrade
+apt dist-upgrade
+apt full-upgrade
+```
+reboot
+
+9. Upgrade to debian 11 
