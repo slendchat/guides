@@ -1,4 +1,4 @@
-1. Set Apt sources.list for debian 9
+1. Set Apt sources.list for debian 9 `/etc/apt/sources.list`
 ```
 deb http://archive.debian.org/debian/ stretch main contrib non-free
 ```
@@ -40,4 +40,8 @@ Select `[4]`
 
 7. Upgrade debian to version 10
 change `/etc/apt/sources.list`
+
+```
+deb http://archive.debian.org/debian/ buster main contrib non-free
+```
 
