@@ -55,4 +55,5 @@ apt full-upgrade
 ```
 reboot
 
-9. Upgrade to debian 11 
+9. Upgrade to Debian 11 with same steps
+10. Upgrade unifi using same script to the latest version.
