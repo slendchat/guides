@@ -11,6 +11,9 @@ result:
 resume job in background
 `bg %[n]` 
 
+move to foreground
+`fg %[n]`
+
 ## jobs command options
 
 Table 1: From the bash command man page
@@ -23,3 +26,4 @@ Table 1: From the bash command man page
 |**-r**|Restrict output to running jobs only.|
 |**-s**|Restrict output to stopped jobs only.|
 |**-x**|COMMAND is run after all job specifications that appear in ARGS have been replaced with the process ID of that job’s process group leader.|
+
