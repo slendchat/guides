@@ -136,4 +136,84 @@ ntpq -p
 
 # Timesyncd
 
-`timedatectl status` retunr
+`timedatectl status` returns NTP service false? then:
+
+ 1. Установка (если не установлен)
+
+```bash
+sudo apt update
+sudo apt install systemd-timesyncd
+```
+
+---
+
+2. Включить и запустить
+
+```bash
+sudo systemctl enable --now systemd-timesyncd
+```
+
+---
+
+ 3. Включить синхронизацию времени
+
+```bash
+sudo timedatectl set-ntp true
+```
+
+---
+
+4. Проверить статус
+
+```bash
+timedatectl status
+```
+
+Должно быть что-то вроде:
+
+```
+System clock synchronized: yes
+NTP service: active
+```
+
+---
+
+5. (По желанию) Настроить свои NTP-серверы
+
+Файл:
+
+```bash
+sudo nano /etc/systemd/timesyncd.conf
+```
+
+Добавь:
+
+```ini
+[Time]
+NTP=ntp.ubuntu.com time.google.com
+FallbackNTP=ntp.pool.org
+```
+
+Сохрани, перезапусти:
+
+```bash
+sudo systemctl restart systemd-timesyncd
+```
+
+---
+
+6. Проверить, с кем синхронизируется
+
+```bash
+timedatectl show-timesync --all
+```
+
+или
+
+```bash
+journalctl -u systemd-timesyncd
+```
+
+`timedatectl set-ntp true
+`
+Вуаля.
