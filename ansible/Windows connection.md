@@ -148,8 +148,4 @@ ansible-playbook test.yml -i inventory.ini --ask-vault-pass
 ```
 
 
-Add-LocalGroupMember -Group 'Remote Management Users' -Member 'EXIMBANK\script-runner'
-winrm configSDDL default
-Enable-PSRemoting -Force
-winrm enumerate winrm/config/Listener
-winrm get winrm/config/service/auth
+
