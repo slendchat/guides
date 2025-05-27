@@ -146,3 +146,5 @@ vault_winrm_password: "StrongPassword123!"
 ```bash
 ansible-playbook test.yml -i inventory.ini --ask-vault-pass
 ```
+
+
