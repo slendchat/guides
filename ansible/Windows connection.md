@@ -152,3 +152,4 @@ Add-LocalGroupMember -Group 'Remote Management Users' -Member 'EXIMBANK\script-r
 winrm configSDDL default
 Enable-PSRemoting -Force
 winrm enumerate winrm/config/Listener
+winrm get winrm/config/service/auth
