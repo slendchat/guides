@@ -72,3 +72,8 @@ openssl x509 -noout -modulus -in certificate.crt | openssl md5
 openssl rsa -noout -modulus -in private.key | openssl md5
 ```
 if hash sums are equal the key and the certificate matches. 
+
+To convert a .p7b certificate file to a .crt file, you can use the OpenSSL command-line tool. First, extract the certificate from the .p7b file using 
+```
+openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
+```
