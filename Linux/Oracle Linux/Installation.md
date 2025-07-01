@@ -12,3 +12,5 @@ Post installation basic:
 
 Security
 + проверить настройки фаервола
++ сделать SElinux permissive
++ настроить SSH
