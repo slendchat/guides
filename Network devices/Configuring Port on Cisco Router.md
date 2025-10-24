@@ -10,4 +10,6 @@ ip address 10.103.1.128 255.255.255.0
 no shutdown
 ```
 
-проверить
+Проверить
+`show ip interface brief`
+
