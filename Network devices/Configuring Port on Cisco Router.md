@@ -6,7 +6,7 @@
 Пример конфигурации порта на роутере
 ```
 interface GigabitEthernet0/0 
-ip address 10.103.1.128 255.255.255.0 
+ip address 192.168.1.128 255.255.255.0 
 no shutdown
 ```
 
