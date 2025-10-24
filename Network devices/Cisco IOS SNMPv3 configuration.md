@@ -6,6 +6,8 @@ snmp-server engineID local <engine-id>
 snmp-server group <group-name> v3 priv
 snmp-server user <username> <group-name> v3 auth sha <auth-password> priv aes 128 <priv-password>
 snmp-server host <host-ip> version 3 auth <username>
+end
+write memory
 ```
 
 Explanation
@@ -55,3 +57,8 @@ SNMPv3 использует Engine ID как "уникальный отпеча�
 
 4. `snmp-server host <host-ip> version 3 auth <username>`
 Настраивает **куда** Cisco будет отправлять traps.
+- `<host-ip>` — IP SNMP-менеджера (например, 192.168.1.100)
+- `version 3` — SNMPv3
+- `auth` — уровень безопасности (можно `noauth`, `auth`, `priv`, но чаще `auth`)
+- `<username>` — имя пользователя SNMPv3, созданного ранее (он будет использоваться для trap-аутентификации)
+
