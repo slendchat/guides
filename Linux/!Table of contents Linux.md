@@ -11,8 +11,10 @@
 11. [[Upgrade destributive]]
 12. [[Kernel manual update]]
 13. [[Time Sync]]
-14. 
+14. [[JOBS]]
 
-
+Other guides:
+1. [[Installation Oracle Linux]]
+2. [[Unifi debian upgrade]]
 
 return to [[README]]
