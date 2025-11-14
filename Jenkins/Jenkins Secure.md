@@ -36,3 +36,6 @@ Limit the permissions to needed scope.
 Use JNLP agents with fixed open port 50000.
 Agent initiate connection to the Controller, the JNLP port should be configured to accept connections on port 50000.
 Make agents use TLS encryption
+Disable SSHD
+Markup Formatter - safe html
+
