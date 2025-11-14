@@ -39,3 +39,6 @@ Make agents use TLS encryption
 Disable SSHD
 Markup Formatter - safe html
 
+### Limit the Agent permissions
+Agents should run the code with configured which user, hence what permissions, will run the build.
+
