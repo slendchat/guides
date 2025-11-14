@@ -29,3 +29,10 @@ Check this tutorial: https://www.youtube.com/watch?v=iPBNEWUocjs
 
 ### Security (Mis)configurations
 No code execution on **controller node**.
+Use proper network segmentation.
+Limit the permissions to needed scope.
+
+### Hardening inbound connections
+Use JNLP agents with fixed open port 50000.
+Agent initiate connection to the Controller, the JNLP port should be configured to accept connections on port 50000.
+Make agents use TLS encryption
