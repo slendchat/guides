@@ -43,4 +43,6 @@ Run code under the container if possible.
 Agents should run the code with configured which user, hence what permissions, will run the build.
 
 ### Secure Credentials
-Use `Folder plugin` to define credentials under specific folder. 
+Use `Folder plugin` to define credentials under specific folders.
+Only pipelines under the specified folder can access its credentials.
+To limit users access to those credentials use `Role-based Authorization Plugin`
