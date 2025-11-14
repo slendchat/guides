@@ -12,4 +12,4 @@
 4. No sudo for jenkins user
 5. Use HTTPS for webui
 6. Block server from public access
-7. 
+7.  Configure FireWall
