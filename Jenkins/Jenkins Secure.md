@@ -13,4 +13,19 @@
 5. Use HTTPS for webui
 6. Block server from public access
 7.  Configure Firewall
-The rule - secure the server as much as the 
+The rule - secure the server as much as the servers where artifacts are deployed.
+
+### Authentication
+Do not use builtin methods for authorization, instead use third party provider like **LDAP**.
+
+### Authorization 
+Do not use builtin methods again.
+Use plugins:
+1. Matrix Authorization Strategy
+2. Role-based Authorization Strategy
+Define the privileges of anon, authenticated or specific user.
+Additionally you can define privileges per project.
+Check this tutorial: https://www.youtube.com/watch?v=iPBNEWUocjs
+
+### Security (Mis)configurations
+No code execution on **controller node**.
