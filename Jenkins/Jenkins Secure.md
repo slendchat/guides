@@ -42,3 +42,5 @@ Run code under the container if possible.
 ### Limit the Agent permissions
 Agents should run the code with configured which user, hence what permissions, will run the build.
 
+### Secure Credentials
+Use `Folder plugin` to define credentials under specific folder. 
