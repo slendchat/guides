@@ -38,7 +38,7 @@ Agent initiate connection to the Controller, the JNLP port should be configured 
 Make agents use TLS encryption
 Disable SSHD
 Markup Formatter - safe html
-
+Run code under the container if possible.
 ### Limit the Agent permissions
 Agents should run the code with configured which user, hence what permissions, will run the build.
 
