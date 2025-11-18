@@ -15,6 +15,7 @@
 
 Other guides:
 1. [[Installation Oracle Linux]]
-2. [[Unifi debian upgrade]]
+2. [[Updating Oracle Linux]]
+3. [[Unifi debian upgrade]]
 
 return to [[README]]
