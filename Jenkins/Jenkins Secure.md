@@ -50,6 +50,5 @@ To limit users access to those credentials use `Role-based Authorization Plugin`
 ### Audit logs
 Use plugin `Audit Trail` allow writing or sending logs to remote server.
 
-
 ## Source
 https://cycode.com/blog/jenkins-security-best-practices/
